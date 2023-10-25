@@ -5,13 +5,33 @@ body{
 main{
     .container{
         width: 1050px;
+        padding: 80px 0px;
+        header{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-bottom: 60px;
+            h2{
+                font-size: 38px;
+                font-weight: 600;
+                text-transform: capitalize;
+                line-height: 45.60px;
+                word-wrap: break-word;
+            }
+            p{
+                font-size: 22px;
+                font-weight: 400;
+                text-transform: capitalize;
+                line-height: 35.20px;
+                word-wrap: break-word;
+            }
+        }
     }
     margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     .section1{
-    padding: 80px 0px;
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
@@ -49,29 +69,100 @@ main{
         }
     }
     .section2{
-        padding: 80px 0px;
         display: flex;
-        header{
+        flex-direction: column;
+        .section2_content{
+            .cards{
+                display: flex;
+                column-gap: 30px;
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    img{
+                        cursor: pointer;
+                        transition: 0.3s;
+                        &:hover{
+                            scale: 0.95;
+                        }
+                    }
+                    >div:nth-child(2){
+                        display: flex;
+                        column-gap: 15px;
+                    }
+                    div:last-child{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 10px;
+                        img{
+                            cursor: pointer;
+                            &:hover{
+                                scale: 1;
+                            }
+                        }
+                    }
+                }
+           }
+
+        }
+    }
+    .section3{
+        display: flex;
+        flex-direction: column;
+        .section3_content{
             display: flex;
-            flex-direction: column;
-            row-gap: 10px;
-            margin-bottom: 60px;
-            h2{
-                font-size: 38px;
-                font-weight: 600;
-                text-transform: capitalize;
-                line-height: 45.60px;
-                word-wrap: break-word;
-            }
-            p{
-                font-size: 22px;
-                font-weight: 400;
-                text-transform: capitalize;
-                line-height: 35.20px;
-                word-wrap: break-word;
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                >div{
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    width: 240px;
+                    height: 238px;
+                    background-color: $cards_backgroundcolor;
+                    border-radius: 20px;
+                    transition: 0.3s;
+                    &:hover{
+                    scale: 0.95;
+                    }
+                    .number{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: $backgroundcolor;
+                        left: 10px;
+                        top: 10px;
+                        position: absolute;
+                        div{
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                        p{
+                            position: absolute;
+                            top: 5px;
+                            color: $cards_backgroundcolor;
+                        }
+                    }
+                    }
+                    img{
+                        position: absolute;
+                        left: 25%;
+                        top: 20px;
+                    }
+                    h3{
+                        position: absolute;
+                        bottom: 50px;
+                    }
+                    p{
+                        position: absolute;
+                        bottom: 20px;
+                    }
+                }
             }
         }
-
-
     }
 }
