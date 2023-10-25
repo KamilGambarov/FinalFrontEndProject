@@ -10,7 +10,7 @@ body {
   font-family: "Work Sans";
 }
 
-.sign-upBtn {
+.primaryBtn {
   width: 152px;
   height: 60px;
   background-color: #A259FF;
@@ -33,6 +33,12 @@ body {
      -moz-column-gap: 12px;
           column-gap: 12px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.primaryBtn:hover {
+  scale: 0.9;
 }
 
 .navbar {
@@ -78,4 +84,106 @@ body {
 
 body {
   background-color: #2b2b2b;
+  color: #FFFFFF;
+}
+
+main {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container {
+  width: 1050px;
+}
+main .section1 {
+  padding: 80px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+main .section1 .leftside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  width: 510px;
+}
+main .section1 .leftside h1 {
+  font-size: 67px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 73.7px;
+  word-wrap: break-word;
+  margin-bottom: -10px;
+}
+main .section1 .leftside p {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 35.2px;
+  word-wrap: break-word;
+}
+main .section1 .leftside button {
+  width: 224px;
+  padding: 0px 50px;
+}
+main .section1 .leftside .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+main .section1 .leftside .stats div {
+  width: 150px;
+}
+main .section2 {
+  padding: 80px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .section2 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 60px;
+}
+main .section2 header h2 {
+  font-size: 38px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 45.6px;
+  word-wrap: break-word;
+}
+main .section2 header p {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 35.2px;
+  word-wrap: break-word;
 }

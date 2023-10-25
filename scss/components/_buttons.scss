@@ -1,4 +1,4 @@
-.sign-upBtn{
+.primaryBtn{
     width: 152px;
     height: 60px;
     background-color: $buttoncolor;
@@ -15,4 +15,9 @@
     align-items: center;
     column-gap: 12px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.primaryBtn:hover{
+    scale: 0.9;
 }
