@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+
+    .leftside_navbar{
+        display: flex;
+        column-gap: 10px;
+        :last-child{
+            padding-top: 4px;
+        }
+    }
+
+    .rightside_navbar{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        padding-left: 20px;
+
+    a{
+        color: $textcolor;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    }
+}
+
