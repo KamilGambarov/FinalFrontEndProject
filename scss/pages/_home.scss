@@ -4,6 +4,7 @@ body{
 }
 main{
     .container{
+        transition: 0.1s;
         display: flex;
         width: 1050px;
         padding: 80px 0px;
@@ -131,7 +132,7 @@ main{
                     justify-content: center;
                     width: 240px;
                     height: 238px;
-                    background-color: $cards_backgroundcolor;
+                    background-color: #3B3B3B;
                     border-radius: 20px;
                     transition: 0.3s;
                     &:hover{
@@ -353,5 +354,138 @@ main{
             }
         }
 
+    }
+}
+
+@media screen and (max-width:1050px) {
+
+    main{
+        .container{
+            display: flex;
+            width: 690px;
+            padding: 40px 0px;
+            header{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                margin-bottom: 40px;
+                position: relative;
+                h2{
+                    font-size: 28px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    line-height: 39.20px;
+                    word-wrap: break-word;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    line-height: 22.40px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .section1{
+        column-gap: 30px;
+            .leftside{
+                width: 330px;
+                h1{
+                    font-size: 38px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    line-height: 45.60px;
+                    word-wrap: break-word;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22.40px;
+                    word-wrap: break-word;
+                }
+                .stats{
+                    img{
+                        width: 70px;
+                    }
+                }
+            }
+            .rightside{
+                img{
+                    width: 330px;
+                    height: 330px;
+                }
+            }
+        }
+        .section2{
+            .section2_content{
+                .cards{
+                    .card3{
+                        display: none;
+                    }
+                }
+            }   
+       } 
+       .section3{
+            .section3_header{
+                p{
+                    width: 343px;
+                }
+            }
+            .section3_content{
+                .cards{
+                    >div{
+                        padding: 20px;
+                        width: 330px;
+                        height: 100px;
+                        .number{
+                            z-index: 5;
+                            p{
+                                left: 10px;
+                            }
+                        }
+                        h3{
+                            left: 100px;
+                        }
+                        p{
+                            left: 100px;
+                        }
+                        img{
+                            width: 60px;
+                            height: 60px;
+                            top: 20px;
+                            left: 20px;
+                        }
+                    }
+                    .card7, .card8, .card9, .card10, .card11, .card12{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .section4{
+            .section4_content{
+                .cards{
+                    >div{
+                        .topside{
+                            width: 150px;
+                            height: 142px;
+                        img{
+                            width: 150px;
+                            height: 142px;
+                        }
+                        }
+                        div:last-child{
+                            width: 150px;
+                            padding: 20px;
+                            h3{
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 22.40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
     }
 }

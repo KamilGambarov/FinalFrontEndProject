@@ -45,6 +45,8 @@ body {
 }
 
 .navbar {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +125,8 @@ main {
           flex-direction: column;
 }
 main .container {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,7 +302,7 @@ main .section3 .section3_content .cards > div {
           justify-content: center;
   width: 240px;
   height: 238px;
-  background-color: #858584;
+  background-color: #3B3B3B;
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -575,6 +579,118 @@ main .section8 .section8_content .rightside div button {
   right: 0;
 }
 
+@media screen and (max-width: 1050px) {
+  main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 690px;
+    padding: 40px 0px;
+  }
+  main .container header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  main .container header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 39.2px;
+    word-wrap: break-word;
+  }
+  main .container header p {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 22.4px;
+    word-wrap: break-word;
+  }
+  main .section1 {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  main .section1 .leftside {
+    width: 330px;
+  }
+  main .section1 .leftside h1 {
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 45.6px;
+    word-wrap: break-word;
+  }
+  main .section1 .leftside p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    word-wrap: break-word;
+  }
+  main .section1 .leftside .stats img {
+    width: 70px;
+  }
+  main .section1 .rightside img {
+    width: 330px;
+    height: 330px;
+  }
+  main .section2 .section2_content .cards .card3 {
+    display: none;
+  }
+  main .section3 .section3_header p {
+    width: 343px;
+  }
+  main .section3 .section3_content .cards > div {
+    padding: 20px;
+    width: 330px;
+    height: 100px;
+  }
+  main .section3 .section3_content .cards > div .number {
+    z-index: 5;
+  }
+  main .section3 .section3_content .cards > div .number p {
+    left: 10px;
+  }
+  main .section3 .section3_content .cards > div h3 {
+    left: 100px;
+  }
+  main .section3 .section3_content .cards > div p {
+    left: 100px;
+  }
+  main .section3 .section3_content .cards > div img {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+  }
+  main .section3 .section3_content .cards .card7, main .section3 .section3_content .cards .card8, main .section3 .section3_content .cards .card9, main .section3 .section3_content .cards .card10, main .section3 .section3_content .cards .card11, main .section3 .section3_content .cards .card12 {
+    display: none;
+  }
+  main .section4 .section4_content .cards > div .topside {
+    width: 150px;
+    height: 142px;
+  }
+  main .section4 .section4_content .cards > div .topside img {
+    width: 150px;
+    height: 142px;
+  }
+  main .section4 .section4_content .cards > div div:last-child {
+    width: 150px;
+    padding: 20px;
+  }
+  main .section4 .section4_content .cards > div div:last-child h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+  }
+}
 .footer {
   width: 100%;
   background-color: #3B3B3B;
