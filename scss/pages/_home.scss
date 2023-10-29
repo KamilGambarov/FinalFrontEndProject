@@ -4,6 +4,7 @@ body{
 }
 main{
     .container{
+        display: flex;
         width: 1050px;
         padding: 80px 0px;
         header{
@@ -33,7 +34,6 @@ main{
     align-items: center;
     flex-direction: column;
     .section1{
-    display: flex;
     justify-content: space-between;
     column-gap: 30px;
         .leftside{
@@ -70,7 +70,6 @@ main{
         }
     }
     .section2{
-        display: flex;
         flex-direction: column;
         .section2_content{
             .cards{
@@ -107,8 +106,7 @@ main{
 
         }
     }
-    .section3{
-        display: flex;
+    .section3{        
         flex-direction: column;
         .section3_header{
             button{
@@ -177,14 +175,18 @@ main{
         }
     }
     .section4{
-        display: flex;
         flex-direction: column;
         .section4_content{
             .cards{
                 display: flex;
                 flex-wrap: wrap;
                 gap: 30px;
+                >div:hover{
+                    scale: 0.95;
+                }
                 >div{
+                    cursor: pointer;
+                    transition: 0.3s;
                     div:last-child{
                         width: 240px;
                         height: 76px;
@@ -201,7 +203,6 @@ main{
         }
     }
     .section5{
-        display: flex;
         flex-direction: column;
         .section5_header{
             button{
@@ -217,7 +218,12 @@ main{
             .cards{
                 display: flex;
                 column-gap: 30px;
+                >div:hover{
+                    scale: 0.95;
+                }
                 div{
+                    cursor: pointer;
+                    transition: 0.3s;
                     .bottomside:last-child{
                         background-color: $cards_backgroundcolor;
                         width: 330px;
@@ -243,5 +249,109 @@ main{
                 }
             }
         }
+    }
+    .section6{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0px;
+        height: 650px;
+        background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%), url(../../img/section6/big_mushroom.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        div{
+            position: relative;
+            h1{
+                position: absolute;
+                left: 0px;
+                bottom: 150px;
+                font-size: 51px;
+                font-weight: 600;
+                text-transform: capitalize;
+                line-height: 56.10px;
+                word-wrap: break-word;
+            }
+            button{
+                position: absolute;
+                left: 0px;
+                bottom: 60px;
+                width: 198px;
+                background-color: $textcolor;
+                color: $backgroundcolor;
+            }
+            >img{
+                position: absolute;
+                bottom: 60px;
+                right: 0px;
+            }
+        }
+    }
+    .section7{
+        flex-direction: column;
+        row-gap: 48px;
+        .cards{
+            display: flex;
+            column-gap: 30px;
+            img{
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            img:hover{
+                scale: 0.95;
+            }
+        }
+    }
+    .section8{
+        padding: 40px 0px 80px 0px;
+        .section8_content{
+            width: 100%;
+            background-color: #3B3B3B;
+            padding: 60px;
+            border-radius: 20px;
+            display: flex;
+            column-gap: 80px;
+            .rightside{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                h2{
+                    font-size: 38px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    line-height: 45.60px;
+                    word-wrap: break-word;
+                }
+                p{
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    line-height: 35.20px;
+                    word-wrap: break-word;
+                    margin-bottom: 30px;
+                }
+                div{
+                    display: flex;
+                    position: relative;
+                input{
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 20px;
+                    padding: 16px 0px 16px 20px;
+                    color: $backgroundcolor;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22.40px;
+                    word-wrap: break-word;
+                    outline: none;
+                    border: none;
+                    }
+                    button{
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
     }
 }
