@@ -18,7 +18,9 @@
         align-items: center;
         column-gap: 40px;
         padding-left: 20px;
-
+        >img{
+            display: none;
+        } 
     a{
         color: $textcolor;
         text-decoration: none;
@@ -27,3 +29,21 @@
     }
 }
 
+@media screen and (max-width: 1050px){
+    .navbar{
+        padding: 15px 50px;
+        .rightside_navbar{
+            >img{
+                display: initial;
+                cursor: pointer;
+            }
+            a{
+                display: none;
+            }
+            button{
+                display: none;
+            }
+
+        }
+    }
+}

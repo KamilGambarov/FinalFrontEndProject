@@ -2,18 +2,29 @@
     width: 100%;
     background-color: #3B3B3B;
     display: flex;
-    justify-content: center;
-    .footer_content{
+    flex-direction: column;
+    align-items: center;
+    p{
+        color: #CCCCCC;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.40px;
+        word-wrap: break-word;
+    }
+    >div:last-child{
+        display: flex;
+        width: 1050px;
+        justify-content: start;
+        >p{
+        padding: 20px 0px 40px 0px;
+        }
+    }
+        .footer_content{
         padding: 40px 31px;
         display: flex;
         column-gap: 84px;
-        p{
-            color: #CCCCCC;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 22.40px;
-            word-wrap: break-word;
-        }
+        border-bottom: 1px solid $textcolor;
+
         .footer_lefside{
             div:first-child{
                 display: flex;
