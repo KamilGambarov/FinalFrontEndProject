@@ -91,7 +91,7 @@ body {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1070px) {
   .navbar {
     padding: 15px 50px;
   }
@@ -550,7 +550,6 @@ main .section8 .section8_content .rightside h2 {
 main .section8 .section8_content .rightside p {
   font-size: 22px;
   font-weight: 400;
-  text-transform: capitalize;
   line-height: 35.2px;
   word-wrap: break-word;
   margin-bottom: 30px;
@@ -579,7 +578,7 @@ main .section8 .section8_content .rightside div button {
   right: 0;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1070px) {
   main .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -689,6 +688,64 @@ main .section8 .section8_content .rightside div button {
     font-size: 16px;
     font-weight: 600;
     line-height: 22.4px;
+  }
+  main .section5 .section5_content .cards .card3 {
+    display: none;
+  }
+  main .section6 {
+    background-size: contain;
+    height: 630px;
+  }
+  main .section6 .container h1 {
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 45.6px */
+    text-transform: capitalize;
+  }
+  main .section7 .section7_content .cards img {
+    width: 210px;
+    height: 320px;
+  }
+  main .section8 .section8_content {
+    padding: 40px 30px;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  main .section8 .section8_content .leftside img {
+    width: 300px;
+    height: 280px;
+  }
+  main .section8 .section8_content .rightside h2 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 39.2px */
+    text-transform: capitalize;
+  }
+  main .section8 .section8_content .rightside p {
+    width: 300px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+  }
+  main .section8 .section8_content .rightside div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    row-gap: 16px;
+  }
+  main .section8 .section8_content .rightside div input {
+    height: 46px;
+  }
+  main .section8 .section8_content .rightside div button {
+    width: 100%;
+    position: initial;
+    height: 46px;
   }
 }
 .footer {
@@ -824,4 +881,28 @@ main .section8 .section8_content .rightside div button {
 .footer .footer_content .footer_rightside div button {
   position: absolute;
   right: 0;
+}
+
+@media screen and (max-width: 1070px) {
+  .footer .footer_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0px;
+    row-gap: 30px;
+  }
+  .footer .footer_content .footer_rightside div {
+    width: 420px;
+  }
+  .footer .footer_content .footer_rightside p {
+    width: 100%;
+  }
+  .footer > div:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 690px;
+    row-gap: 20px;
+  }
 }

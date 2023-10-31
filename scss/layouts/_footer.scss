@@ -91,3 +91,27 @@
         }
     }
 }
+
+@media screen and (max-width: 1070px) {
+    .footer{
+        .footer_content{
+            flex-direction: column;
+            padding-left: 0px;
+            row-gap: 30px;
+            .footer_rightside{
+                div{
+                    width: 420px;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+
+        }
+        >div:last-child{
+            display: flex;
+            width: 690px;
+            row-gap: 20px;
+        }
+    }
+}
