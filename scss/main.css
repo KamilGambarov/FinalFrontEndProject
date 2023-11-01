@@ -106,6 +106,11 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 700px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+}
 body {
   background-color: #2b2b2b;
   color: #FFFFFF;
@@ -507,6 +512,9 @@ main .section7 .cards {
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+main .section7 .cards .mobile {
+  display: none;
+}
 main .section7 .cards img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -696,6 +704,9 @@ main .section8 .section8_content .rightside div button {
     background-size: contain;
     height: 630px;
   }
+  main .section6 .container {
+    padding: 40px 0px;
+  }
   main .section6 .container h1 {
     font-size: 38px;
     font-style: normal;
@@ -746,6 +757,102 @@ main .section8 .section8_content .rightside div button {
     width: 100%;
     position: initial;
     height: 46px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .container {
+    width: 315px;
+    padding: 40px 0px;
+  }
+  main .section1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+  }
+  main .section1 .leftside button {
+    width: 100%;
+  }
+  main .section2 .section2_content .cards .card2 {
+    display: none;
+  }
+  main .section3 .section3_header button {
+    display: none;
+  }
+  main .section4 .section4_content .cards {
+    -webkit-column-gap: 19px;
+       -moz-column-gap: 19px;
+            column-gap: 19px;
+  }
+  main .section4 .section4_content .cards > div .topside {
+    width: 148px;
+    height: 142px;
+  }
+  main .section4 .section4_content .cards > div .topside img {
+    width: 148px;
+    height: 142px;
+  }
+  main .section4 .section4_content .cards > div div:last-child {
+    width: 148px;
+    padding: 20px;
+  }
+  main .section4 .section4_content .cards > div div:last-child h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+  }
+  main .section5 .section5_header button {
+    display: none;
+  }
+  main .section5 .section5_content .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+  main .section5 .section5_content .cards .card3 {
+    display: initial;
+  }
+  main .section6 {
+    background-size: fill;
+    height: 593px;
+  }
+  main .section7 .cards {
+    margin-left: -15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .section7 .cards img:nth-child(1), main .section7 .cards img:nth-child(2), main .section7 .cards img:nth-child(3) {
+    display: none;
+  }
+  main .section7 .cards img {
+    width: 330px !important;
+    height: 157px !important;
+  }
+  main .section7 .cards .mobile {
+    display: initial;
+  }
+  main .section8 .section8_content {
+    background-color: #2b2b2b;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .section8 .section8_content .leftside {
+    width: 100%;
+  }
+  main .section8 .section8_content .leftside img {
+    width: 315px;
+    height: 255px;
+  }
+  main .section8 .section8_content .rightside div {
+    width: 100%;
   }
 }
 .footer {
@@ -889,7 +996,7 @@ main .section8 .section8_content .rightside div button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-left: 0px;
+    padding: 40 0px;
     row-gap: 30px;
   }
   .footer .footer_content .footer_rightside div {
@@ -904,5 +1011,26 @@ main .section8 .section8_content .rightside div button {
     display: flex;
     width: 690px;
     row-gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer .footer_content {
+    padding: 40px 0px;
+  }
+  .footer .footer_content .footer_rightside div:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    row-gap: 16px;
+  }
+  .footer .footer_content .footer_rightside div:last-child input {
+    height: 46px;
+  }
+  .footer .footer_content .footer_rightside div:last-child .primaryBtn {
+    position: initial;
+    width: 100%;
+    height: 46px;
   }
 }

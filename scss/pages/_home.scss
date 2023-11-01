@@ -293,6 +293,9 @@ main{
         .cards{
             display: flex;
             column-gap: 30px;
+            .mobile{
+                display: none;
+            }
             img{
                 transition: 0.3s;
                 cursor: pointer;
@@ -499,6 +502,7 @@ main{
             background-size: contain;
             height: 630px;
             .container{
+                padding: 40px 0px;
                 h1{
                     font-size: 38px;
                     font-style: normal;
@@ -560,5 +564,125 @@ main{
                 }
             }
         }  
+    }
+}
+
+@media screen and (max-width:700px) {
+    main{
+        .container{
+            width: 315px;
+            padding: 40px 0px;
+        }
+        .section1{
+            flex-direction: column;
+            row-gap: 40px;
+            .leftside{
+                button{
+                    width: 100%;
+                }
+            }
+        }
+        .section2{
+            .section2_content{
+                .cards{
+                    .card2{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .section3{
+            .section3_header{
+                button{
+                    display: none;
+                }
+            }
+        }
+        .section4{
+            .section4_content{
+                .cards{
+                    column-gap: 19px;
+                    >div{
+                        .topside{
+                            width: 148px;
+                            height: 142px;
+                            img{
+                            width: 148px;
+                            height: 142px;
+                            }
+                        }
+                        div:last-child{
+                            width: 148px;
+                            padding: 20px;
+                            h3{
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 22.40px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        .section5{
+            .section5_header{
+                button{
+                    display: none;
+                }
+            }
+            .section5_content{
+                .cards{
+                    flex-direction: column;
+                    row-gap: 20px;
+                    .card3{
+                        display: initial;
+                    }
+                }
+            }
+        }
+        .section6{
+            background-size: fill;
+            height: 593px;
+            div{
+
+            }
+        }
+        .section7{
+            .cards{
+                margin-left: -15px;
+                flex-direction: column;
+                img:nth-child(1), img:nth-child(2), img:nth-child(3){
+                    display: none;
+                }
+                img{
+                    width: 330px !important;
+                    height: 157px !important;
+                }
+                .mobile{
+                    display: initial;
+
+                }
+            }
+        }
+        .section8{
+            .section8_content{
+                background-color: $backgroundcolor;
+                padding: 0;
+                flex-direction: column;
+                .leftside{
+                    width: 100%;
+                    img{
+                        width: 315px;
+                        height: 255px;
+                    }
+                }
+                .rightside{
+                    div{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
