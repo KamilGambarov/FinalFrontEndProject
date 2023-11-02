@@ -567,7 +567,7 @@ main{
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
     main{
         .container{
             width: 315px;
@@ -577,14 +577,30 @@ main{
             flex-direction: column;
             row-gap: 40px;
             .leftside{
+                width: 315px;
                 button{
                     width: 100%;
+                }
+            }
+            .rightside{
+                img{
+                    width: 315px;
                 }
             }
         }
         .section2{
             .section2_content{
                 .cards{
+                    >div{
+                        >img{
+                            width: 315px !important;
+                        }
+                        >div:nth-child(2){
+                        img{
+                            width: 95px;
+                        }
+                        }
+                    }
                     .card2{
                         display: none;
                     }
@@ -593,8 +609,19 @@ main{
         }
         .section3{
             .section3_header{
+                p{
+                    width: 315px;
+                }
                 button{
                     display: none;
+                }
+            }
+            .section3_content{
+                .cards{
+                    div{
+                        width: 315px;
+                    }
+                    
                 }
             }
         }
@@ -644,9 +671,6 @@ main{
         .section6{
             background-size: fill;
             height: 593px;
-            div{
-
-            }
         }
         .section7{
             .cards{

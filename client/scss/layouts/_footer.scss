@@ -136,5 +136,10 @@
                 }
             }
         }
+        >div:last-child{
+            display: flex;
+            width: 375px;
+            padding: 0px 31px;
+        }
     }
 }
