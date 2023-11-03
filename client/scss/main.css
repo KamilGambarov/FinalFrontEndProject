@@ -1059,6 +1059,11 @@ main .section8 .section8_content .rightside div button {
     padding: 0px 31px;
   }
 }
+.container {
+  width: 1050px;
+  padding: 40px 0px;
+}
+
 .center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1135,17 +1140,14 @@ main .section8 .section8_content .rightside div button {
   height: 46px;
 }
 
-.footer {
-  margin-top: -4px;
-}
-.footer .copyright {
-  padding-left: 60px;
-}
-
 @media screen and (max-width: 1070px) {
+  .container {
+    width: 690px;
+    padding: 40px 0px;
+  }
   .center .leftside_content img {
     width: 397px;
-    height: 615px;
+    height: 645px;
   }
   .center .rightside_content h1 {
     font-size: 38px;
@@ -1161,14 +1163,11 @@ main .section8 .section8_content .rightside div button {
     row-gap: 15px;
   }
 }
-.footer {
-  margin-top: -25px;
-}
-.footer .copyright {
-  padding-left: 80px;
-}
-
 @media screen and (max-width: 700px) {
+  .container {
+    width: 315px;
+    padding: 40px 0px;
+  }
   .center {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1204,16 +1203,7 @@ main .section8 .section8_content .rightside div button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .footer {
-    margin-top: 40px;
-  }
-  .footer .footer_rightside input {
-    width: 315px;
-  }
-  .footer .footer_rightside button {
-    width: 315px;
-  }
-  .footer .footer_rightside p {
-    width: 315px;
+  .center .rightside_content .primaryBtn {
+    margin-bottom: 40px;
   }
 }
