@@ -13,6 +13,7 @@
         padding: 90px 0px 40px 0px;
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid $cards_backgroundcolor;
         .creator_img{
         position: absolute;
         top: -70px;
@@ -60,10 +61,73 @@
         .right_content{
             display: flex;
             column-gap: 20px;
+            button:first-child{
+                width: 200px;
+            }
             button:last-child{
                 background-color: transparent;
                 border: 1px solid $buttoncolor;
             }
         }
     }  
+}
+
+.nfts_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .creator_NFTs_header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        p{  font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 30.8px */
+            text-transform: capitalize;
+        }
+    }
+    .creator_NFTs{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 80px;
+        background-color: $cards_backgroundcolor;
+        .section5_content{
+            .cards{
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+                >div:hover{
+                    scale: 0.95;
+                }
+                div{
+                    cursor: pointer;
+                    transition: 0.3s;
+                    .bottomside:last-child{
+                        background-color: $backgroundcolor;
+                        width: 330px;
+                        height: 173px;
+                        margin-top: -3px;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px 30px 25px 30px;
+                        row-gap: 25px;
+                        >div:nth-child(2){
+                            display: flex;
+                            margin-top: -20px;
+                            column-gap: 5px;
+                            align-items: center;
+                        }
+                        >div:last-child{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

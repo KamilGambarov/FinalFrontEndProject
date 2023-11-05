@@ -154,7 +154,7 @@ main{
                         p{
                             position: absolute;
                             top: 5px;
-                            color: $cards_backgroundcolor;
+                            color: $textcolor;
                         }
                     }
                     }
@@ -257,7 +257,7 @@ main{
         width: 100%;
         padding: 0px;
         height: 650px;
-        background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%), url(../../img/section6/big_mushroom.png);
+        background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%), url("../../../client/img/section6/big_mushroom.png");
         background-repeat: no-repeat;
         background-size: cover;
         div{

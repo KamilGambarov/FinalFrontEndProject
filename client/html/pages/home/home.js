@@ -17,12 +17,10 @@ function fillCreators(data){
         card_number_text.textContent = element.id;
         let creator_img = document.createElement("img");
         creator_img.src = `../../../../${element.profileImgPath}`;
-        console.log(creator_img);
         let creator_name = document.createElement("h3");
         creator_name.textContent = element.name;
         let creator_value_currency = document.createElement("p");
         creator_value_currency.textContent = "Total sales: " + element.totalSale.value + " " + element.totalSale.currency
-
 
         section3_cards.append(card);
         card.append(card_number);
@@ -31,7 +29,15 @@ function fillCreators(data){
         card.append(creator_img)
         card.append(creator_name);
         card.append(creator_value_currency);
+
+        creatorInfo(card, element);
     });
+}
+
+function creatorInfo (card, creator){
+    card.addEventListener("click", ()=>{
+        window.open(`http://127.0.0.1:5500/client/html/pages/creator_info/creator_info.html?creator_id=${creator.id}`);
+    })
 }
 
 getCreators();

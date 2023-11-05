@@ -337,7 +337,7 @@ main .section3 .section3_content .cards > div .number div {
 main .section3 .section3_content .cards > div .number div p {
   position: absolute;
   top: 5px;
-  color: #858584;
+  color: #FFFFFF;
 }
 main .section3 .section3_content .cards > div img {
   position: absolute;
@@ -420,7 +420,7 @@ main .section5 .section5_content .cards div {
   transition: 0.3s;
 }
 main .section5 .section5_content .cards div .bottomside:last-child {
-  background-color: #858584;
+  background-color: #3b3b3b;
   width: 330px;
   height: 173px;
   margin-top: -3px;
@@ -466,8 +466,8 @@ main .section6 {
   width: 100%;
   padding: 0px;
   height: 650px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(162, 89, 255, 0)), to(#A259FF)), url(../../img/section6/big_mushroom.png);
-  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%), url(../../img/section6/big_mushroom.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(162, 89, 255, 0)), to(#A259FF)), url("../../../client/img/section6/big_mushroom.png");
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%), url("../../../client/img/section6/big_mushroom.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1229,6 +1229,7 @@ main .section8 .section8_content .rightside div button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #3b3b3b;
 }
 .creator_info_body .creator_info_content .creator_img {
   position: absolute;
@@ -1298,7 +1299,103 @@ main .section8 .section8_content .rightside div button {
      -moz-column-gap: 20px;
           column-gap: 20px;
 }
+.creator_info_body .creator_info_content .right_content button:first-child {
+  width: 200px;
+}
 .creator_info_body .creator_info_content .right_content button:last-child {
   background-color: transparent;
   border: 1px solid #A259FF;
+}
+
+.nfts_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nfts_section .creator_NFTs_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 50px;
+}
+.nfts_section .creator_NFTs_header p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+}
+.nfts_section .creator_NFTs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-top: 80px;
+  background-color: #3b3b3b;
+}
+.nfts_section .creator_NFTs .section5_content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.nfts_section .creator_NFTs .section5_content .cards > div:hover {
+  scale: 0.95;
+}
+.nfts_section .creator_NFTs .section5_content .cards div {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child {
+  background-color: #2b2b2b;
+  width: 330px;
+  height: 173px;
+  margin-top: -3px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px 25px 30px;
+  row-gap: 25px;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -20px;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
