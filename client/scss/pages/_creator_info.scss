@@ -79,12 +79,13 @@
     .creator_NFTs_header{
         display: flex;
         justify-content: space-between;
-        padding: 10px 50px;
+        padding: 10px 120px;
         p{  font-size: 22px;
             font-style: normal;
             font-weight: 600;
             line-height: 140%; /* 30.8px */
             text-transform: capitalize;
+            cursor: pointer;
         }
     }
     .creator_NFTs{
@@ -116,14 +117,27 @@
                         padding: 20px 30px 25px 30px;
                         row-gap: 25px;
                         >div:nth-child(2){
+                            img{
+                                width: 24px;
+                                height: 24px;
+                            }
                             display: flex;
                             margin-top: -20px;
                             column-gap: 5px;
                             align-items: center;
+                            justify-content: start;
                         }
                         >div:last-child{
                             display: flex;
                             justify-content: space-between;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 5px;
+                            }
+                            p:first-child{
+                                color: #858584;
+                            }
                         }
                     }
                 }
@@ -131,3 +145,49 @@
         }
     }
 }
+
+@media screen and (max-width:1050px) {
+    .container{
+        width: 690px;
+    }
+    .creator_info_body{
+        .creator_info_content{
+            flex-direction: column-reverse;
+            row-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:690px) {
+    .container{
+        width: 315px;
+    }
+    .creator_info_body{
+        .creator_info_content{
+
+           .creator_img{
+                left: 40%;
+            }
+            .right_content{
+                flex-direction: column;
+                row-gap: 10px;
+                .primaryBtn:first-child{
+                    width: 100%;
+                }
+                .primaryBtn:last-child{
+                    width: 100%;
+                }
+            }  
+        }      
+    }
+
+
+
+    .nfts_section{
+        .creator_NFTs_header{
+            justify-content: center;
+            column-gap: 10px;
+        }
+    }
+}
+

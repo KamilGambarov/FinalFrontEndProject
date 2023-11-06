@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1326,7 +1327,7 @@ main .section8 .section8_content .rightside div button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 50px;
+  padding: 10px 120px;
 }
 .nfts_section .creator_NFTs_header p {
   font-size: 22px;
@@ -1334,6 +1335,7 @@ main .section8 .section8_content .rightside div button {
   font-weight: 600;
   line-height: 140%; /* 30.8px */
   text-transform: capitalize;
+  cursor: pointer;
 }
 .nfts_section .creator_NFTs {
   display: -webkit-box;
@@ -1390,6 +1392,13 @@ main .section8 .section8_content .rightside div button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:nth-child(2) img {
+  width: 24px;
+  height: 24px;
 }
 .nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:last-child {
   display: -webkit-box;
@@ -1398,4 +1407,59 @@ main .section8 .section8_content .rightside div button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:last-child div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
+}
+.nfts_section .creator_NFTs .section5_content .cards div .bottomside:last-child > div:last-child p:first-child {
+  color: #858584;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    width: 690px;
+  }
+  .creator_info_body .creator_info_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .container {
+    width: 315px;
+  }
+  .creator_info_body .creator_info_content .creator_img {
+    left: 40%;
+  }
+  .creator_info_body .creator_info_content .right_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+  }
+  .creator_info_body .creator_info_content .right_content .primaryBtn:first-child {
+    width: 100%;
+  }
+  .creator_info_body .creator_info_content .right_content .primaryBtn:last-child {
+    width: 100%;
+  }
+  .nfts_section .creator_NFTs_header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
 }
