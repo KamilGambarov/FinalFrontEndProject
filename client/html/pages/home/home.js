@@ -1,5 +1,6 @@
-let section3_cards = document.querySelector(".section3_content>.cards")
-
+let section3_cards = document.querySelector(".section3_content>.cards");
+let subscribeInput_section = document.getElementById("subscribe_section");
+let subscribeBtn_section = document.querySelector(".section8_content .rightside .primaryBtn");
 
 async function getCreators (){
     let response = await fetch("http://127.0.0.1:3000/api/creators");
@@ -39,5 +40,43 @@ function creatorInfo (card, creator){
         window.open(`http://127.0.0.1:5500/client/html/pages/creator_info/creator_info.html?creator_id=${creator.id}`);
     })
 }
+
+subscribeBtn_section.addEventListener("click", ()=>{
+    if(regEmail.test(subscribeInput_section.value)){
+        Toastify({
+            text: "Success subscribe",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                color: "white",
+                background: "green"
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+          subscribeInput_section.value = "";
+    }
+    else{
+        Toastify({
+            text: "Error subscribe",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                color: "white",
+                background: "red"
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }
+})
 
 getCreators();

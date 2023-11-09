@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../../../scss/main.css">
     <script defer src="./home.js"></script>
+    <script defer src="../index.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -306,7 +308,7 @@
                     <h2>Join our weekly digest</h2>
                     <p>Get eclusive promotions & updates straight to your inbox.</p>
                     <div>
-                        <input type="text" placeholder="Enter your email here">
+                        <input id="subscribe_section" type="text" placeholder="Enter your email here">
                         <button class="primaryBtn">
                             <img src="../../../img/section8/EnvelopeSimple.svg" alt="">
                             Subscribe</button>
@@ -348,8 +350,8 @@
                 </div>
                 <p>Get exclusive promotions & updates straight to your inbox.</p>
                 <div>
-                    <input type="text" placeholder="Enter your email here">
-                    <button class="primaryBtn">Subscribe</button>
+                    <input id="subscribe_footer" type="text" placeholder="Enter your email here">
+                    <button class="primaryBtn" >Subscribe</button>
                 </div>
             </div>
             </div>
@@ -358,5 +360,6 @@
             </div>
         </div>
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>`

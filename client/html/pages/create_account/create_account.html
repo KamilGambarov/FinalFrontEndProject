@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../../../scss/main.css">
+    <script defer src="../create_account/create_account.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -18,7 +20,7 @@
             <a href="">Connect a wallet</a>
             <button class="primaryBtn">
                 <img src="../../../img/button/user.svg" alt="">
-                Sign Up
+                Login
             </button>
             <img src="../../../img/navbar/burger_menu.svg" alt="">
         </div>
@@ -33,19 +35,20 @@
             <div>
             <div>
             <img src="../../../img/create_account/User.svg" alt="">
-            <input type="text" placeholder="Username">
+            <input id="usernameInput" type="text" placeholder="Username">
             </div>
             <div>
             <img src="../../../img/create_account/EnvelopeSimple.svg" alt="">
-            <input type="text" placeholder="Email Address">
+            <input id="emailInput" type="text" placeholder="Email Address">
             </div>
             <div>
             <img src="../../../img/create_account/LockKey.svg" alt="">
-            <input type="text" placeholder="Password">
+            <input id="passwordInput" type="password" placeholder="Password">
             </div>
             <div>
             <img src="../../../img/create_account/LockKey.svg" alt="">
-            <input type="text" placeholder="Confirm Password">
+            <input id="confirmInput" type="password" placeholder="Confirm Password">
+    
             </div>
             <button class="primaryBtn">Create account</button>
             </div>
@@ -94,5 +97,6 @@
             <p>Ⓒ NFT Market. Use this template freely.</p>
         </div>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
