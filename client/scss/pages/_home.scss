@@ -121,6 +121,7 @@ main{
         }
         .section3_content{
             display: flex;
+            position: relative;
             .cards{
                 display: flex;
                 flex-wrap: wrap;

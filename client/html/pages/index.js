@@ -2,7 +2,8 @@ let signUpBtn = document.querySelector(".rightside_navbar .primaryBtn");
 let subscribeBtn = document.querySelector(".footer_rightside .primaryBtn");
 let subscribeInput = document.getElementById("subscribe_footer");
 let regEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
-
+let nftBtn = document.querySelector(".navbar .leftside_navbar");
+let marketplaceBtn = document.querySelector(".navbar .rightside_navbar #marketplace");
 
 signUpBtn.addEventListener("click",()=>{
     window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
@@ -44,6 +45,14 @@ subscribeBtn.addEventListener("click",()=>{
             onClick: function(){} // Callback after click
           }).showToast();
     }
+})
+
+nftBtn.addEventListener("click", ()=>{
+    window.open("http://127.0.0.1:5500/client/html/pages/home/home.html", "_self")
+})
+
+marketplaceBtn.addEventListener("click", ()=>{
+    window.open("http://127.0.0.1:5500/client/html/pages/marketplace/marketplace.html");
 })
 
 

@@ -51,8 +51,6 @@ async function createAccount(user){
         },
         body: JSON.stringify(user),
     })
-
-    console.log(response);
     if(response.status === 200){
         usernameInput.value = "";
         emailInput.value = "";
@@ -74,8 +72,9 @@ async function createAccount(user){
             onClick: function(){} // Callback after click
           }).showToast();
     }else{
+        let data = await response.json();
         Toastify({
-            text: "Can't create user",
+            text: data.error,
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,
