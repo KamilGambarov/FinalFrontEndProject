@@ -1,10 +1,12 @@
 let section3_cards = document.querySelector(".section3_content>.cards");
 let subscribeInput_section = document.getElementById("subscribe_section");
 let subscribeBtn_section = document.querySelector(".section8_content .rightside .primaryBtn");
+let section3_spinner = document.querySelector(".section3_content .spinner");
 
 async function getCreators (){
     let response = await fetch("http://127.0.0.1:3000/api/creators");
     let creators = await response.json();
+    section3_spinner.style.display = "none";
     fillCreators(creators);
 }
 
@@ -79,4 +81,6 @@ subscribeBtn_section.addEventListener("click", ()=>{
     }
 })
 
-getCreators();
+setTimeout(()=>{
+    getCreators();
+}, 5000)
