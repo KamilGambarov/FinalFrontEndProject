@@ -33,7 +33,7 @@
         line-height: 140%; /* 22.4px */
         color: $textcolor;
     }
-    div{
+    .container >div{
         position: relative;
         img{
             position: absolute;
@@ -44,3 +44,127 @@
     }
 
 }
+
+.nfts_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .creator_NFTs_header{
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 50px;
+        p{  font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 30.8px */
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    }
+    .creator_NFTs{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 20px;
+        background-color: $cards_backgroundcolor;
+        .section5_content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .cards{
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+                >div:hover{
+                    scale: 0.95;
+                }
+                div{
+                    cursor: pointer;
+                    transition: 0.3s;
+                    .bottomside:last-child{
+                        background-color: $backgroundcolor;
+                        width: 330px;
+                        height: 173px;
+                        margin-top: -3px;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px 30px 25px 30px;
+                        row-gap: 25px;
+                        >div:nth-child(2){
+                            img{
+                                width: 24px;
+                                height: 24px;
+                            }
+                            display: flex;
+                            margin-top: -20px;
+                            column-gap: 5px;
+                            align-items: center;
+                            justify-content: start;
+                        }
+                        >div:last-child{
+                            display: flex;
+                            justify-content: space-between;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 5px;
+                            }
+                            p:first-child{
+                                color: #858584;
+                            }
+                        }
+                    }
+                }
+            }
+            .more{
+                position: relative;;
+                .spinner{
+                    left: 55px;
+                    top: 8px;
+                    width: 45px;
+                    height: 45px;
+                    .spinner1{
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+            .primaryBtn{
+                background-color: transparent;
+                border: 1px solid $buttoncolor;
+            }
+        }
+    }
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 35px;
+    height: 35px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  }
+  
+  .spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    filter: blur(10px);
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  }

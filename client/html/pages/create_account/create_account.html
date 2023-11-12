@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../../../scss/main.css">
     <script defer src="../create_account/create_account.js"></script>
+    <script defer src="../index.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -15,12 +16,12 @@
             <img src="../../../img/navbar/navbar_logo.svg" alt="">
         </div>
         <div class="rightside_navbar">
-            <a href="">Marketplace</a>
+            <a class="marketplace" href="">Marketplace</a>
             <a href="">Rankings</a>
             <a href="">Connect a wallet</a>
             <button class="primaryBtn">
                 <img src="../../../img/button/user.svg" alt="">
-                Login
+                Sign Up
             </button>
             <img src="../../../img/navbar/burger_menu.svg" alt="">
         </div>
@@ -48,7 +49,6 @@
             <div>
             <img src="../../../img/create_account/LockKey.svg" alt="">
             <input id="confirmInput" type="password" placeholder="Confirm Password">
-    
             </div>
             <button class="primaryBtn">Create account</button>
             </div>
@@ -88,15 +88,16 @@
             </div>
             <p>Get exclusive promotions & updates straight to your inbox.</p>
             <div>
-                <input type="text" placeholder="Enter your email here">
-                <button class="primaryBtn">Subscribe</button>
+                <input id="subscribe_footer" type="text" placeholder="Enter your email here">
+                <button class="primaryBtn" >Subscribe</button>
             </div>
         </div>
         </div>
-        <div class="copyright">
+        <div>
             <p>Ⓒ NFT Market. Use this template freely.</p>
         </div>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
-</html>
+</html>`

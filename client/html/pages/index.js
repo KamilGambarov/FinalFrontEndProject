@@ -1,16 +1,16 @@
 let signUpBtn = document.querySelector(".rightside_navbar .primaryBtn");
 let subscribeBtn = document.querySelector(".footer_rightside .primaryBtn");
 let subscribeInput = document.getElementById("subscribe_footer");
-let regEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
+let regexEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
 let nftBtn = document.querySelector(".navbar .leftside_navbar");
-let marketplaceBtn = document.querySelector(".navbar .rightside_navbar #marketplace");
+let marketplaceBtn = document.querySelector(".navbar .rightside_navbar .marketplace");
 
 signUpBtn.addEventListener("click",()=>{
     window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
 })
 
 subscribeBtn.addEventListener("click",()=>{
-    if(regEmail.test(subscribeInput.value)){
+    if(regexEmail.test(subscribeInput.value)){
         Toastify({
             text: "Success subscribe",
             duration: 3000,
@@ -54,6 +54,7 @@ nftBtn.addEventListener("click", ()=>{
 marketplaceBtn.addEventListener("click", ()=>{
     window.open("http://127.0.0.1:5500/client/html/pages/marketplace/marketplace.html");
 })
+
 
 
     
