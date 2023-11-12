@@ -11,11 +11,30 @@ let nftCards = document.querySelector(".cards");
 
 
 
+
 async function getCreatorInfo(){
     let response = await fetch(`http://localhost:3000/api/creators/${creatorId}`);
     let creatorInfo = await response.json();
     fillCreatorInfo(creatorInfo);
     fillCreatorsNFTs(creatorInfo);
+    chainId.addEventListener("click", ()=>{
+        navigator.clipboard.writeText(creatorInfo.chainId);
+        Toastify({
+            text: "Copied to clipboard",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                color: "white",
+                background: "green"
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    })
 }
 
 function fillCreatorInfo(creator){
