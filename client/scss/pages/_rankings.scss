@@ -29,15 +29,18 @@
     }
     .rankings_cards{
         margin-top: 20px;
-        width: 100%;
-        height: 84px;
-        background-color: #3B3B3B;
-        border-radius: 20px;
-        position: relative;
         display: flex;
+        flex-direction: column;
+        row-gap: 20px;
         .card{
+            margin: 0px;
+            background-color: #3B3B3B;
+            border-radius: 20px;    
+            width: 100%;
+            height: 84px;
             display: flex;
             align-items: center;
+            position: relative;
             .number{
                 position: absolute;
                 left: 20px;
