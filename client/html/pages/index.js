@@ -4,8 +4,16 @@ let subscribeInput = document.getElementById("subscribe_footer");
 let regexEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
 let nftBtn = document.querySelector(".navbar .leftside_navbar");
 let marketplaceBtn = document.querySelector(".navbar .rightside_navbar .marketplace");
+let burgerBtn = document.querySelector(".navbar .burgerBtn")
+let sidebar = document.querySelector(".rightside_navbar>div:last-child");
+let sidebar_signUp = document.querySelector(".rightside_navbar>div:last-child .primaryBtn");
+
 
 signUpBtn.addEventListener("click",()=>{
+    window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
+})
+
+sidebar_signUp.addEventListener("click",()=>{
     window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
 })
 
@@ -56,7 +64,19 @@ marketplaceBtn.addEventListener("click", ()=>{
 })
 
 
+burgerBtn.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    sidebar.className = "sidebar_open";
+})
 
-    
+
+window.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    sidebar.className = "sidebar_closed";
+})
+
+sidebar.addEventListener("click", (e)=>{
+    e.stopPropagation();
+})
     
 

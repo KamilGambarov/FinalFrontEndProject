@@ -44,7 +44,7 @@ function creatorInfo (card, creator){
 }
 
 subscribeBtn_section.addEventListener("click", ()=>{
-    if(regEmail.test(subscribeInput_section.value)){
+    if(regexEmail.test(subscribeInput_section.value)){
         Toastify({
             text: "Success subscribe",
             duration: 3000,

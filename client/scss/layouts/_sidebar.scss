@@ -1,0 +1,42 @@
+.sidebar_closed{
+    display: none;
+}
+
+.sidebar_open{
+    width: 220px;
+    height: 8835px;
+    display: flex;
+    flex-direction: column;
+    background-color: $cards_backgroundcolor;
+    align-items: start;
+    row-gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 15;
+}
+
+
+@media screen and (max-width: 1070px) {
+    .navbar{
+        position: relative;
+    }
+    
+    .sidebar{
+        width: 100px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        align-items: start;
+        row-gap: 20px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+
+
+

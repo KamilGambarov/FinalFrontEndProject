@@ -58,6 +58,7 @@ async function login (user){
             },
             onClick: function(){} // Callback after click
           }).showToast();
+          window.open("http://127.0.0.1:5500/client/html/pages/home/home.html", "_self")
     }
 
 }
