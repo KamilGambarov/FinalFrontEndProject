@@ -1816,7 +1816,10 @@ main .section8 .section8_content .rightside div button {
   padding: 10px 50px;
   margin-bottom: 40px;
 }
-.rankings div:nth-child(4) {
+.rankings div:nth-child(3) p:nth-child(5), .rankings div:nth-child(3) p:nth-child(6), .rankings div:nth-child(3) p:nth-child(7), .rankings div:nth-child(3) p:nth-child(8) {
+  display: none;
+}
+.rankings > div:nth-child(4) {
   height: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1828,12 +1831,12 @@ main .section8 .section8_content .rightside div button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.rankings div:nth-child(4) span:first-child {
+.rankings > div:nth-child(4) span:first-child {
   padding-left: 45px;
   width: 430px;
   margin-right: -80px;
 }
-.rankings div:nth-child(4) span:last-child {
+.rankings > div:nth-child(4) span:last-child {
   padding-right: 90px;
 }
 .rankings .rankings_cards {
@@ -1868,8 +1871,15 @@ main .section8 .section8_content .rightside div button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  padding-left: 12px;
-  padding-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .rankings .rankings_cards .card img {
   position: absolute;
@@ -1885,7 +1895,7 @@ main .section8 .section8_content .rightside div button {
 }
 .rankings .rankings_cards .card .change {
   position: absolute;
-  left: 485px;
+  left: 487px;
 }
 .rankings .rankings_cards .card .NFTs_sold {
   position: absolute;
@@ -1893,5 +1903,90 @@ main .section8 .section8_content .rightside div button {
 }
 .rankings .rankings_cards .card .volume {
   position: absolute;
-  right: 105px;
+  right: 120px;
+}
+
+@media screen and (max-width: 1070px) {
+  .rankings > div:nth-child(4) span:nth-child(3) {
+    display: none;
+  }
+  .rankings .rankings_cards .card .NFTs_sold {
+    display: none;
+  }
+  .rankings .rankings_cards .card .change {
+    left: 407px;
+  }
+  .rankings .rankings_cards .card .volume {
+    position: absolute;
+    right: 120px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rankings > div:nth-child(3) {
+    padding: 0px 20px;
+  }
+  .rankings > div:nth-child(3) p:nth-child(1), .rankings > div:nth-child(3) p:nth-child(2), .rankings > div:nth-child(3) p:nth-child(3), .rankings > div:nth-child(3) p:nth-child(4) {
+    display: none;
+  }
+  .rankings > div:nth-child(3) p:nth-child(5), .rankings > div:nth-child(3) p:nth-child(6), .rankings > div:nth-child(3) p:nth-child(7), .rankings > div:nth-child(3) p:nth-child(8) {
+    display: initial;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    text-transform: capitalize;
+  }
+  .rankings > div:nth-child(4) span:first-child {
+    padding-left: 10px;
+  }
+  .rankings > div:nth-child(4) span:nth-child(2) {
+    display: none;
+  }
+  .rankings > div:nth-child(4) span:last-child {
+    padding-right: 50px;
+  }
+  .rankings .rankings_cards .card {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rankings .rankings_cards .card img {
+    width: 24px;
+    height: 24px;
+    left: 50px;
+    top: 13px;
+  }
+  .rankings .rankings_cards .card .number {
+    width: 20px;
+    height: 20px;
+  }
+  .rankings .rankings_cards .card .change {
+    display: none;
+  }
+  .rankings .rankings_cards .card .volume {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    right: 80px;
+  }
+  .rankings .rankings_cards .card .artist_name {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    left: 40px;
+  }
+  .rankings .rankings_cards .card button:last-child {
+    width: 40px;
+    height: 40px;
+  }
 }

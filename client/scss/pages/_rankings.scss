@@ -10,8 +10,11 @@
         justify-content: space-between;
         padding: 10px 50px;
         margin-bottom: 40px;
+        p:nth-child(5),p:nth-child(6),p:nth-child(7),p:nth-child(8){
+            display: none;
+        }
     }
-    div:nth-child(4){
+    >div:nth-child(4){
         span:first-child{
             padding-left: 45px;
             width: 430px;
@@ -48,8 +51,9 @@
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
-                padding-left: 12px;
-                padding-top: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             img{
             position: absolute;
@@ -65,7 +69,7 @@
             }
             .change{
                 position: absolute;
-                left: 485px;
+                left: 487px;
             }
             .NFTs_sold{
                 position: absolute;
@@ -73,7 +77,104 @@
             }
             .volume{
                 position: absolute;
-                right: 105px;
+                right: 120px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1070px){
+    .rankings{
+        >div:nth-child(4){
+            span:nth-child(3){
+                display: none;
+            }
+        }
+        .rankings_cards{
+            .card{
+                .NFTs_sold{
+                    display: none;
+                }
+                .change{
+                    left: 407px;
+                }
+                .volume{
+                    position: absolute;
+                    right: 120px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    .rankings{
+        >div:nth-child(3){
+            padding: 0px 20px;
+            p:nth-child(1),p:nth-child(2),p:nth-child(3),p:nth-child(4){
+                display: none;
+            }
+            p:nth-child(5),p:nth-child(6),p:nth-child(7),p:nth-child(8){
+                display: initial;
+                color: var(--White, #FFF);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 22.4px */
+                text-transform: capitalize;
+            }
+        }
+        >div:nth-child(4){
+            span:first-child{
+                padding-left: 10px;
+            }
+            span:nth-child(2){
+                display: none;
+            }
+            span:last-child{
+                padding-right: 50px;
+            }
+        }
+        .rankings_cards{
+            .card{
+                height: 50px;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    left: 50px;
+                    top: 13px;
+                }
+                .number{
+                    width: 20px;
+                    height: 20px;
+                }
+                .change{
+                    display: none;
+                }
+                .volume{
+                    font-family: Work Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    right: 80px;
+                }
+                .artist_name{
+                    font-family: Work Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    left: 40px;
+                }
+                button:last-child{
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }
