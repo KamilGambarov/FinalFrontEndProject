@@ -1,6 +1,62 @@
 let ranking_cards = document.querySelector(".rankings_cards");
+let changeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(2)");
+let nftSoldBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(3)");
+let volumeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(4)");
+let clicked = 0;
+let sortParam = 0;
+
+nftSoldBtn.addEventListener("click", ()=>{
+    clicked+=1;
+    sortParam = 2;
+    if(clicked%2 == 1){
+        getSortedRankings();
+    }
+    else{
+        getRankings();
+    }
+})
+
+volumeBtn.addEventListener("click", ()=>{
+    clicked+=1;
+    sortParam = 3;
+    if(clicked%2 == 1){
+        getSortedRankings();
+    }
+    else{
+        getRankings();
+    }
+})
+
+changeBtn.addEventListener("click", ()=>{
+    clicked+=1;
+    sortParam = 1;
+    if(clicked%2 == 1){
+        getSortedRankings();
+    }
+    else{
+        getRankings();
+    }
+})
 
 getRankings();
+
+async function getSortedRankings (){
+    let response = await fetch("http://127.0.0.1:3000/api/creators");
+    let rankings = await response.json();
+    if(sortParam==1){
+        let sortedRankings = rankings.sort((a,b)=>b.totalSale.value - a.totalSale.value);
+        fillRankings(sortedRankings);
+    }
+    else if(sortParam==2){
+        let sortedRankings = rankings.sort((a,b)=>b.nftSold - a.nftSold);
+        fillRankings(sortedRankings);
+    }
+    else if(sortParam==3){
+        let sortedRankings = rankings.sort((a,b)=>b.totalSale.value - a.totalSale.value);
+        fillRankings(sortedRankings);
+    }
+
+}
 
 async function getRankings (){
     let response = await fetch("http://127.0.0.1:3000/api/creators");
@@ -8,8 +64,9 @@ async function getRankings (){
     fillRankings(rankings);
 }
 
-function fillRankings(rankings){
-    rankings.forEach(element => {
+function fillRankings(object){
+    ranking_cards.innerHTML = "";
+    object.forEach(element => {
         let card = document.createElement("div");
         card.className = "card";
         let ranking_id = document.createElement("div");
@@ -29,7 +86,7 @@ function fillRankings(rankings){
         ranking_NFTs.textContent = element.nftSold;
         let ranking_volume = document.createElement("div");
         ranking_volume.className = "volume";
-        ranking_volume.textContent = element.followers;
+        ranking_volume.textContent = element.volume;
         let deleteBtn = document.createElement("button");
         deleteBtn.className = "primaryBtn";
         deleteBtn.textContent = "Delete";
@@ -50,6 +107,7 @@ function fillRankings(rankings){
         deleteBtn.addEventListener("click", ()=>{
             deleteCreator(element, card);
         })
+  
     });
 }
 
@@ -65,3 +123,5 @@ async function deleteCreator(ranking, card){
     }
 
 }
+
+

@@ -1831,13 +1831,16 @@ main .section8 .section8_content .rightside div button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.rankings > div:nth-child(4) span {
+  cursor: pointer;
+}
 .rankings > div:nth-child(4) span:first-child {
   padding-left: 45px;
   width: 430px;
   margin-right: -80px;
 }
 .rankings > div:nth-child(4) span:last-child {
-  padding-right: 90px;
+  padding-right: 100px;
 }
 .rankings .rankings_cards {
   margin-top: 20px;

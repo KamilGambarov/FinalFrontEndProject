@@ -4,6 +4,10 @@ let passwordInput = document.getElementById("passwordInput");
 let confirmInput = document.getElementById("confirmInput");
 
 let validationExc = document.createElement("span");
+let validationExc1 = document.createElement("span");
+let validationExc2 = document.createElement("span");
+let validationExc3 = document.createElement("span");
+let validationExc4 = document.createElement("span");
 
 let regUsername = new RegExp("^[a-zA-Z0-9_-]{4,16}$");
 let regEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
@@ -14,7 +18,11 @@ let loginBtn = document.querySelector(".rightside_navbar .primaryBtn");
 let regitserBtn = document.querySelector(".rightside_content .primaryBtn");
 
 regitserBtn.addEventListener("click", ()=>{
-    validationExc.textContent = "";
+    validationExc1.textContent = "";
+    validationExc2.textContent = "";
+    validationExc3.textContent = "";
+    validationExc4.textContent = "";
+
     if(regUsername.test(usernameInput.value) && regEmail.test(emailInput.value) && regPass.test(passwordInput.value) && passwordInput.value == confirmInput.value){
         let user = {
             username: `${usernameInput.value}`,
@@ -24,22 +32,33 @@ regitserBtn.addEventListener("click", ()=>{
         createAccount(user);
         window.open("http://127.0.0.1:5500/client/html/pages/login/login.html", "_self")
     }
+    // else if(usernameInput.value == "" || emailInput.value == "" || passwordInput.value == "" || confirmInput.value == ""){
+    //     validationExc1.textContent = "This field is required";
+    //     validationExc2.textContent = "This field is required";
+    //     validationExc3.textContent = "This field is required";
+    //     validationExc4.textContent = "This field is required";
+    //     usernameInput.after(validationExc1);
+    //     emailInput.after(validationExc2);
+    //     passwordInput.after(validationExc3);
+    //     confirmInput.after(validationExc4);
+    // }
+
     else{
     if(!regUsername.test(usernameInput.value)){
-        validationExc.textContent = "Incorrect format of username";
-        usernameInput.after(validationExc);
+        validationExc1.textContent = "Incorrect format of username";
+        usernameInput.after(validationExc1);
     }
     if(!regEmail.test(emailInput.value)){
-        validationExc.textContent = "Incorrect format of email";
-        emailInput.after(validationExc);
+        validationExc2.textContent = "Incorrect format of email";
+        emailInput.after(validationExc2);
     }
     if(!regPass.test(passwordInput.value)){
-        validationExc.textContent = "Password must consist at least 1 uppercase, 1 lowercase word 1 digit and 1 special symbol";
-        passwordInput.after(validationExc);
+        validationExc3.textContent = "Password must consist at least 1 uppercase, 1 lowercase word 1 digit and 1 special symbol";
+        passwordInput.after(validationExc3);
     }
-    else if(passwordInput.value != confirmInput.value){
-        validationExc.textContent = "Passwords must be same";
-        confirmInput.after(validationExc);
+    if(passwordInput.value != confirmInput.value || passwordInput.value == ""){
+        validationExc4.textContent = "Confirm Passwords is required and must be same with password";
+        confirmInput.after(validationExc4);
     }
    }
 })
