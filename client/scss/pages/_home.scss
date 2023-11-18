@@ -1,6 +1,7 @@
 body{
     background-color: $backgroundcolor;
     color: $textcolor;
+    overflow-x: hidden;
 }
 main{
     .container{
@@ -669,6 +670,7 @@ main{
             }
         }
         .section6{
+            display: none;
             background-size: fill;
             height: 593px;
         }

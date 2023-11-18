@@ -2,6 +2,7 @@ let ranking_cards = document.querySelector(".rankings_cards");
 let changeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(2)");
 let nftSoldBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(3)");
 let volumeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(4)");
+let spinner = document.querySelector(".spinner")
 let clicked = 0;
 let sortParam = 0;
 
@@ -41,6 +42,7 @@ changeBtn.addEventListener("click", ()=>{
 getRankings();
 
 async function getSortedRankings (){
+    spinner.style.display = "initial";
     let response = await fetch("https://finalfrontendproject.onrender.com/api/creators");
     let rankings = await response.json();
     if(sortParam==1){
@@ -55,6 +57,8 @@ async function getSortedRankings (){
         let sortedRankings = rankings.sort((a,b)=>b.totalSale.value - a.totalSale.value);
         fillRankings(sortedRankings);
     }
+    spinner.style.display = "none";
+    
 
 }
 

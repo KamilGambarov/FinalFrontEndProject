@@ -115,6 +115,7 @@ body {
 body {
   background-color: #2b2b2b;
   color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 main {
@@ -835,6 +836,7 @@ main .section8 .section8_content .rightside div button {
     display: initial;
   }
   main .section6 {
+    display: none;
     background-size: fill;
     height: 593px;
   }
@@ -2018,5 +2020,38 @@ main .section8 .section8_content .rightside div button {
   .rankings .rankings_cards .card button:last-child {
     width: 40px;
     height: 40px;
+  }
+}
+.spinner {
+  display: initial;
+  position: relative;
+  margin: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, rgb(186, 66, 255)), to(rgb(0, 225, 255)));
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 150px;
+  height: 150px;
+  -webkit-animation: spinning82341 1.7s linear infinite;
+          animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+          box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
