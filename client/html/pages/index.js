@@ -10,11 +10,11 @@ let sidebar_signUp = document.querySelector(".rightside_navbar>div:last-child .p
 
 
 signUpBtn.addEventListener("click",()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/create_account/create_account.html")
 })
 
 sidebar_signUp.addEventListener("click",()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html")
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/create_account/create_account.html")
 })
 
 subscribeBtn.addEventListener("click",()=>{
@@ -56,11 +56,11 @@ subscribeBtn.addEventListener("click",()=>{
 })
 
 nftBtn.addEventListener("click", ()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/home/home.html", "_self")
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/home/home.html", "_self")
 })
 
 marketplaceBtn.addEventListener("click", ()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/marketplace/marketplace.html");
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/marketplace/marketplace.html");
 })
 
 

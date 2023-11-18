@@ -58,7 +58,7 @@ async function login (user){
             },
             onClick: function(){} // Callback after click
           }).showToast();
-          window.open("http://127.0.0.1:5500/client/html/pages/home/home.html", "_self")
+          window.open("https://final-front-end-project.vercel.app/client/html/pages/home/home.html", "_self")
     }
 
 }
@@ -66,5 +66,5 @@ async function login (user){
 let signUpBtn = document.querySelector(".rightside_navbar .primaryBtn");
 
 signUpBtn.addEventListener("click",()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/create_account/create_account.html", "_self")
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/create_account/create_account.html", "_self")
 })

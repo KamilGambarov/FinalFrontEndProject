@@ -30,7 +30,7 @@ regitserBtn.addEventListener("click", ()=>{
             password: `${passwordInput.value}`
         }
         createAccount(user);
-        window.open("http://127.0.0.1:5500/client/html/pages/login/login.html", "_self")
+        window.open("https://final-front-end-project.vercel.app/client/html/pages/login/login.html", "_self")
     }
     // else if(usernameInput.value == "" || emailInput.value == "" || passwordInput.value == "" || confirmInput.value == ""){
     //     validationExc1.textContent = "This field is required";
@@ -112,5 +112,5 @@ async function createAccount(user){
 }
 
 loginBtn.addEventListener("click", ()=>{
-    window.open("http://127.0.0.1:5500/client/html/pages/login/login.html", "_self")
+    window.open("https://final-front-end-project.vercel.app/client/html/pages/login/login.html", "_self")
 })

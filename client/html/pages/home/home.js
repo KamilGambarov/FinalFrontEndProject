@@ -39,7 +39,7 @@ function fillCreators(data){
 
 function creatorInfo (card, creator){
     card.addEventListener("click", ()=>{
-        window.open(`http://127.0.0.1:5500/client/html/pages/creator_info/creator_info.html?creator_id=${creator.id}`);
+        window.open(`https://final-front-end-project.vercel.app/client/html/pages/creator_info/creator_info.html?creator_id=${creator.id}`);
     })
 }
 
