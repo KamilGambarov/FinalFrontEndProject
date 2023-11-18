@@ -4,7 +4,7 @@ let subscribeBtn_section = document.querySelector(".section8_content .rightside 
 let section3_spinner = document.querySelector(".section3_content .spinner");
 
 async function getCreators (){
-    let response = await fetch("http://127.0.0.1:3000/api/creators");
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/creators");
     let creators = await response.json();
     section3_spinner.style.display = "none";
     fillCreators(creators);

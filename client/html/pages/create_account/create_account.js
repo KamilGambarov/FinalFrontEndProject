@@ -64,7 +64,7 @@ regitserBtn.addEventListener("click", ()=>{
 })
 
 async function createAccount(user){
-    let response = await fetch("http://localhost:3000/api/register", {
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/register", {
         method: "POST",
         headers: {
             "CONTENT-TYPE": "application/json",

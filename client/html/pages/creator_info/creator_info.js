@@ -13,7 +13,7 @@ let nftCards = document.querySelector(".cards");
 
 
 async function getCreatorInfo(){
-    let response = await fetch(`http://localhost:3000/api/creators/${creatorId}`);
+    let response = await fetch(`https://finalfrontendproject.onrender.com/api/creators/${creatorId}`);
     let creatorInfo = await response.json();
     fillCreatorInfo(creatorInfo);
     fillCreatorsNFTs(creatorInfo);

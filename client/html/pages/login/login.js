@@ -14,7 +14,7 @@ loginBtn.addEventListener("click", ()=>{
 })
 
 async function login (user){
-    let response = await fetch("http://localhost:3000/api/login", {
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/login", {
         method: "post",
         headers: {
             "Content-type": "application/json",

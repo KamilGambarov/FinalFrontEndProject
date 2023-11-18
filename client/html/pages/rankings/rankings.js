@@ -41,7 +41,7 @@ changeBtn.addEventListener("click", ()=>{
 getRankings();
 
 async function getSortedRankings (){
-    let response = await fetch("http://127.0.0.1:3000/api/creators");
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/creators");
     let rankings = await response.json();
     if(sortParam==1){
         let sortedRankings = rankings.sort((a,b)=>b.totalSale.value - a.totalSale.value);
@@ -59,7 +59,7 @@ async function getSortedRankings (){
 }
 
 async function getRankings (){
-    let response = await fetch("http://127.0.0.1:3000/api/creators");
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/creators");
     let rankings = await response.json();
     fillRankings(rankings);
 }
@@ -114,7 +114,7 @@ function fillRankings(object){
 
 async function deleteCreator(ranking, card){
     if(confirm(`Are you sure to delete creator with id ${ranking.id}?`)){
-        let response = fetch(`http://localhost:3000/api/creators/${ranking.id}`, {
+        let response = fetch(`https://final-nft-marketplace.up.railway.app/api/creators/${ranking.id}`, {
             method: "DELETE",
         });
         if((await response).status == 200){

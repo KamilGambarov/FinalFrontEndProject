@@ -3,6 +3,8 @@ let moreBtn = document.querySelector(".section5_content .primaryBtn");
 let searchInput = document.querySelector(".content .container input");
 let spinner1 = document.querySelector(".content .spinner");
 let spinner2 = document.querySelector(".section5_content .spinner");
+let spinner3 = document.querySelector(".cards .big_spinner");
+
 
 getNFTs(6);
 
@@ -28,7 +30,8 @@ moreBtn.addEventListener("click", ()=>{
 
 async function getNFTs(pageSize, skip=0, searchString=""){
     moreBtn.disabled = true;
-    let response = await fetch("http://localhost:3000/api/nfts", {
+    spinner3.style.display = "initial";
+    let response = await fetch("https://finalfrontendproject.onrender.com/api/nfts", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -41,6 +44,7 @@ async function getNFTs(pageSize, skip=0, searchString=""){
     })
     spinner1.style.display = "none";
     spinner2.style.display = "none";
+    spinner3.style.display = "none";
 
     let data = await response.json();
     fillNFTs(data);
