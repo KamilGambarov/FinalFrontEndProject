@@ -2,7 +2,7 @@ let ranking_cards = document.querySelector(".rankings_cards");
 let changeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(2)");
 let nftSoldBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(3)");
 let volumeBtn = document.querySelector(".rankings div:nth-child(4) span:nth-child(4)");
-let spinner = document.querySelector(".spinner")
+let spinner = document.querySelector(".spinner_rankings")
 let clicked = 0;
 let sortParam = 0;
 
